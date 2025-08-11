@@ -1,0 +1,15 @@
+[gd_scene load_steps=2 format=3 uid="uid://b7c6g2vq2i2w8"]
+
+[ext_resource type="Script" path="res://05_Procedural_Generation/Development_Plan/terrain_generator.gd" id="1_abcde"]
+
+[node name="WorldGenTest" type="Node3D"]
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(-0.866025, -0.433013, 0.25, 0, 0.5, 0.866025, -0.5, 0.75, -0.433013, 0, 0, 0)
+shadow_enabled = true
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.707107, 0.707107, 0, -0.707107, 0.707107, 0, 50, 50)
+
+[node name="TerrainMesh" type="MeshInstance3D" parent="."]
+script = ExtResource("1_abcde")
